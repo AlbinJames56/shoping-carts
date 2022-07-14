@@ -1,16 +1,19 @@
 <section>
-  <div class="container mt-5">
-    <div class="row">
+  <div class="container mt-6 p-3">
+    <div class="row" >
       {{#each products}}
-        <div class="card" style="width: 18rem;">
-          {{!-- <img class="card-img-top" src="{{this.image}}" alt="Card image cap" /> --}}
-          <div class="card-body">
-            <h5 class="card-title">{{this.Name}}</h5>
-            <p class="card-text">{{this.Description}}</p>
-            <a href="#" class="btn btn-primary">Add to cart</a>
-          </div>
-        </div>
+       <div class="card" style="mt-20; width: 18rem; height:37rem; padding:14px; border: 19px solid rgba(0,0,0,.125);border-radius: 1.25rem;">
+          <img class="card-img-top" src="/images/{{this._id}}.jpg"alt="Card image cap" >
+          {{!-- style="padding-left: 23px;padding-top: 20px;width: 14rem;" --}}
+           <div class="card-body">
+               <h5 class="card-title">{{this.Name}}</h5>
+               <p class="card-text">{{this.Description}}.</p>
+               <p class="card-text">{{this.Price}}.</p>
+               <a href="#" class="btn btn-primary">Add to cart</a>
+           </div>
+       </div> 
       {{/each}}
     </div>
-  </div>
+  </div>        
 </section>
+
