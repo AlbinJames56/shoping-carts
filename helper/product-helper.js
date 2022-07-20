@@ -5,10 +5,8 @@ const async = require('hbs/lib/async')
 const { ObjectId } = require('mongodb')
 module.exports={
     addProduct:(product,callback)=>{
-        console.log(product)
+        // console.log(product)
         db.get().collection(collection.PRODUCT_COLLECTION).insertOne(product).then((data)=>{
-            //console.log("ob    ",  data)
-            
             callback(data.insertedId)
         })
     },
